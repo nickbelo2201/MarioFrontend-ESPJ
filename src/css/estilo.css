@@ -1,0 +1,129 @@
+/* Variaveis globais */
+:root{
+    --color1:#f0f0f0;
+    --color2:#333;
+    --color3:#555;
+    --color4:#3ae4b1;
+    --color5:#000;
+    --colorLinear:linear-gradient(purple, aqua);
+    --fontFamily:"Cascadia Code",sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:bordex-box;
+}
+
+body{
+    background:var(--color1);
+    font-family:var(--fontFamily);
+}
+
+/************************************************************************
+Estilizando o HERO
+************************************************************************/
+#inicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    background:var(--color3);
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+    transition: opacity 1s ease-in-out; /*efeito suave*/
+}
+
+#imgHero{
+    width:400px;
+    height:400px;
+    margin-top:-10px;
+    border-radius:50%;
+    animation: rodar 1s ease-in-out;
+}
+@keyframes rodar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+#titulo{
+    margin-top:100px;
+    text-align:center;
+    font-size:2rem;
+    background:var(--color5);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation: efeito 1s ease-in-out;
+}
+@keyframes efeito{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+}
+
+
+header {
+    background:var(--color2); /*cor do fundo*/
+    color:var(--color3); /*cor da font*/
+    padding:20px;/*espaceamento interno*/
+    display:flex;/*Deixa cada um de um lado*/
+    justify-content:space-around;/*ajusta conteudo*/
+    align-items:center;
+    border-radius: 50px;
+}
+
+header #logo{
+    width: 100px; /*Definindo larura*/ 
+    height:80px; /*Definindo altura*/
+    border-radius:50%; /*arredondando*/
+}
+
+header nav ul{
+    display:flex; /**/
+    gap: 20px; /*Espaço entre elementos*/
+    list-style:none; /*Remove bolinha de listas*/
+}
+
+header nav ul li a{
+    text-decoration:none; /*Remove a linha*/
+    color:var(--color1); /*Cor da fonte*/
+    font-weight: 800; /*Negrito*/ 
+}
+/*hover é uma pseudo-classe, faz um efeito ao passar o mouse*/
+header nav ul li a:hover{
+    color:var(--color4);/*cor da fonte*/
+    tex-decoration:underline; /*adiciona linha*/
+    text-transform:uppercase; /* deixa maiusculo */
+}
+.cor{
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    background:var(--colorLinear)
+}
+#texto{
+    margin-top:100px;
+    text-align:center;
+    font-size:2rem;
+    background:var(--color3);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text
+}
+div{
+
+}
