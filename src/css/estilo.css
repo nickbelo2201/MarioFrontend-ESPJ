@@ -79,7 +79,7 @@ Estilizando o HERO
 header {
     background:var(--color2); /*cor do fundo*/
     color:var(--color3); /*cor da font*/
-    padding:20px;/*espaceamento interno*/
+    padding:20px 0px;/*espaceamento interno*/
     display:flex;/*Deixa cada um de um lado*/
     justify-content:space-around;/*ajusta conteudo*/
     align-items:center;
@@ -109,9 +109,28 @@ header nav ul li a:hover{
     tex-decoration:underline; /*adiciona linha*/
     text-transform:uppercase; /* deixa maiusculo */
 }
+
+/* MENU-HAMBURGUER */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index:1001;
+}
+.menu-hamburguer span{
+    width: 100%;
+    height: 3px;
+    background: var(--color1);
+    border-radius: 10px; 
+} 
+
+
 .cor{
-    width:30px;
-    height:30px;
+    width:30px; /*Largura*/
+    height:30px; /**/
     border-radius:50px;
     background:var(--colorLinear)
 }
@@ -124,6 +143,32 @@ header nav ul li a:hover{
     -webkit-text-fill-color:transparent;
     background-clip:text
 }
-div{
 
+/* RESPONSIVIDADE HAMBURGUER */
+
+@media (max-width: 768px){
+    .menu-hamburguer{
+        display: flex;
+    }
+    nav{
+        display:none;
+        position: absolute;
+        top:70px;
+        left:0;
+        margin-left:2%;
+        background:var(--color2);
+        flex-direction:column; 
+        padding: 20px 0;
+        border-radius: 30px;
+    }
+    nav.active{
+        display:block;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align:center;
+    }
+    .open span:nth-child(1){transform:rotate(45deg)translate(5px, 5px);}
+    .open span:nth-child(2){opacity:0}
+    .open span:nth-child(3){transform:rotate(-45deg)translate(7px, -7px);}
 }
